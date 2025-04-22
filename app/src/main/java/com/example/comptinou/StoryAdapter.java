@@ -1,4 +1,4 @@
 package com.example.comptinou;
 
-public class MyStoriesActivity {
+public class StoryAdapter {
 }
