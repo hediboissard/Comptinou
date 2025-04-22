@@ -2,4 +2,19 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Palette de couleurs pastel -->
+    <color name="pastel_blue">#A8D8F0</color>
+    <color name="pastel_pink">#FFD1DC</color>
+    <color name="pastel_yellow">#FFFFD1</color>
+    <color name="pastel_green">#C1E1C1</color>
+    <color name="pastel_purple">#C3B1E1</color>
+
+    <!-- Couleurs de texte -->
+    <color name="text_primary">#4A4A4A</color>
+    <color name="text_secondary">#767676</color>
+
+    <!-- Couleurs de fond -->
+    <color name="background_main">#F8F8FF</color>
+    <color name="button_primary">@color/pastel_blue</color>
 </resources>

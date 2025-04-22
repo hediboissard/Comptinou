@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:background="@color/background_main"
+                                                     tools:context=".StoryDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pastel_blue">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/story_detail_title"
+                app:titleTextColor="@color/text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/storyDetailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="L'aventure de Sophie dans la forêt magique" />
+
+            <View
+                    android:layout_width="100dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/pastel_pink" />
+
+            <TextView
+                    android:id="@+id/storyDetailContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    tools:text="Il était une fois une petite fille nommée Sophie qui adorait explorer le monde... Long story text goes here with multiple paragraphs and details about the adventure." />
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="@color/pastel_yellow"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:text="@string/story_elements_used"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:id="@+id/storyElementsUsed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="casual"
+                            android:textColor="@color/text_primary"
+                            android:textSize="16sp"
+                            tools:text="Sophie, forêt, magie, papillon" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/background_main"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+        <Button
+                android:id="@+id/shareButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="casual"
+                android:text="@string/share"
+                app:backgroundTint="@color/pastel_green"
+                app:icon="@drawable/ic_share"
+                app:iconTint="@color/white" />
+
+        <Button
+                android:id="@+id/editButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="casual"
+                android:text="@string/edit"
+                app:backgroundTint="@color/pastel_blue"
+                app:icon="@drawable/ic_edit"
+                app:iconTint="@color/white" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/background_main"
+                                                   tools:context=".CreateStoryActivity">
+
+    <TextView
+            android:id="@+id/createStoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="casual"
+            android:text="@string/create_story_title"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/generateButton"
+            app:layout_constraintTop_toBottomOf="@id/createStoryTitle">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/pastel_yellow"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:text="@string/hero_name"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/heroNameInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_edit_text"
+                            android:fontFamily="casual"
+                            android:hint="@string/hero_name_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/pastel_green"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:text="@string/story_elements"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/storyElementsInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_edit_text"
+                            android:fontFamily="casual"
+                            android:hint="@string/story_elements_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/pastel_purple"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:text="@string/story_type"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    <RadioGroup
+                            android:id="@+id/storyTypeRadioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                        <RadioButton
+                                android:id="@+id/adventureRadioButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="casual"
+                                android:text="@string/story_type_adventure"
+                                android:textSize="16sp" />
+
+                        <RadioButton
+                                android:id="@+id/fantasyRadioButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="casual"
+                                android:text="@string/story_type_fantasy"
+                                android:textSize="16sp" />
+
+                        <RadioButton
+                                android:id="@+id/educationalRadioButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="casual"
+                                android:text="@string/story_type_educational"
+                                android:textSize="16sp" />
+                    </RadioGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/generateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="casual"
+            android:padding="16dp"
+            android:text="@string/generate_story"
+            android:textSize="18sp"
+            app:backgroundTint="@color/pastel_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

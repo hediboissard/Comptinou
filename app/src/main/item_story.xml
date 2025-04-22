@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:layout_margin="8dp"
+                                                   app:cardBackgroundColor="@color/white"
+                                                   app:cardCornerRadius="16dp"
+                                                   app:cardElevation="4dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <TextView
+                android:id="@+id/storyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="casual"
+                android:maxLines="1"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="L'aventure de Sophie" />
+
+        <TextView
+                android:id="@+id/storyPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="casual"
+                android:maxLines="3"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                tools:text="Il était une fois une petite fille nommée Sophie qui adorait explorer le monde..." />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/storyDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    tools:text="18 Oct 2023" />
+
+            <ImageButton
+                    android:id="@+id/shareButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/share_story"
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/pastel_green" />
+
+            <ImageButton
+                    android:id="@+id/editButton"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/edit_story"
+                    android:src="@drawable/ic_edit"
+                    app:tint="@color/pastel_blue" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

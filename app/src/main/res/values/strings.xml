@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Comptinou</string>
+    <string name="app_name_display">Comptinou</string>
+    <string name="app_subtitle">Des histoires magiques pour les petits</string>
+    <string name="app_logo">Logo de l\'application</string>
+    <string name="create_story">Créer une histoire</string>
+    <string name="my_stories">Mes histoires</string>
+    <string name="create_story_title">Raconte-moi une histoire</string>
+    <string name="generate_story">Générer l\'histoire</string>
+    <string name="hero_name">Nom du héros</string>
+    <string name="hero_name_hint">Ex: Sophie, Lucas, Petit Ours...</string>
+    <string name="story_elements">Éléments de l\'histoire</string>
+    <string name="story_elements_hint">Ex: forêt, dragon, château, magie...</string>
+    <string name="story_type">Type d\'histoire</string>
+    <string name="story_type_adventure">Aventure</string>
+    <string name="story_type_fantasy">Fantaisie</string>
+    <string name="story_type_educational">Éducative</string>
+    <string name="my_stories_title">Mes histoires</string>
+    <string name="empty_stories_message">Vous n\'avez pas encore créé d\'histoires</string>
+    <string name="create_new_story">Créer une nouvelle histoire</string>
+    <string name="share_story">Partager l\'histoire</string>
+    <string name="edit_story">Modifier l\'histoire</string>
+    <string name="story_detail_title">Histoire</string>
+    <string name="story_elements_used">Éléments utilisés</string>
+    <string name="share">Partager</string>
+    <string name="edit">Modifier</string>
 </resources>
