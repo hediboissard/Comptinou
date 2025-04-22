@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
 }
-
+configurations.all {
+    exclude(group = "com.google.guava", module = "listenablefuture")
+}
 android {
     namespace = "com.example.comptinou"
     compileSdk = 35
@@ -32,7 +34,9 @@ android {
 }
 
 dependencies {
-
+    implementation("com.google.guava:guava:23.0") {
+        exclude(group = "com.google.guava", module = "listenablefuture")
+    }
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

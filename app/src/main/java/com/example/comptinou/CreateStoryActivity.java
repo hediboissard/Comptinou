@@ -1,5 +1,6 @@
 package com.example.comptinou;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class CreateStoryActivity extends AppCompatActivity {
     private EditText heroNameInput;
     private Button generateButton;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
