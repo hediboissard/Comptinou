@@ -37,6 +37,7 @@ dependencies {
     implementation("com.google.guava:guava:23.0") {
         exclude(group = "com.google.guava", module = "listenablefuture")
     }
+    implementation (libs.json)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

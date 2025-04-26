@@ -14,9 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button createStoryButton;
-    private Button myStoriesButton;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +25,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        // Initialiser les boutons
-        createStoryButton = findViewById(R.id.createStoryButton);
-        myStoriesButton = findViewById(R.id.myStoriesButton);
-
-        // Ajouter les écouteurs d'événements
+        Button createStoryButton = findViewById(R.id.createStoryButton);
+        Button myStoriesButton = findViewById(R.id.myStoriesButton);
         createStoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Naviguer vers l'activité de création d'histoire
                 Intent intent = new Intent(MainActivity.this, CreateStoryActivity.class);
                 startActivity(intent);
             }
@@ -46,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         myStoriesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Naviguer vers l'activité Mes Histoires
                 Intent intent = new Intent(MainActivity.this, MyStoriesActivity.class);
                 startActivity(intent);
             }
